@@ -7,11 +7,13 @@ int registro ()// função do registro de nomes
 {
 	 setlocale(LC_ALL, "Portuguese"); 
 	//criando variáveis
+	char informacao [40];
 	char arquivo [40];
 	char cpf [40];	
 	char nome [50];
 	char sobrenome [55];
 	char cargo [40];
+	int laco2=1;
 	 //fim da criação
 	 
 	printf ("/tDigite o CPF a ser cadastrado:\n ");//coletando informação do usuário
@@ -57,7 +59,7 @@ int registro ()// função do registro de nomes
 	fprintf (file, cargo);
 	fclose (file);
 	
-	
+
 	system ("pause");//pausa o sistema para podermos visualiza-lo 
 	
 }
@@ -126,7 +128,8 @@ int main()
       	printf ("escolha a opção desejada do menu:\n\n");
      	printf ("\t1 - Registrar nomes\n");
     	printf ("\t2 - Consultar nomes\n");
-	    printf ("\t3 - deletar nomes\n\n");//última opcão do menu
+	    printf ("\t3 - deletar nomes\n");//última opcão do menu
+	    printf ("\t4 - sair\n\n");
     	printf ("opção:");
 	
         scanf  ("%d", &opcao); // armazenando a escolha do usuário
@@ -145,6 +148,11 @@ int main()
          	
             case 3:
          	deletar();
+		    break;
+		    
+		    case 4:
+		    printf ("obrigado por utilizar o sistema\n");
+		    return 0;
 		    break;
 		    
 		    default:
