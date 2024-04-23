@@ -117,52 +117,72 @@ int main()
 {
 	int opcao=0; // definindo as variáveis.
 	int laco=1;
+	char senhadigitada[10]="a";
+	int comparacao;
 	
-	for (laco=1;laco=1;)
-	{
-		
-	  system ("cls");
+	 printf ("### cartório da EBAC ###\n\n");
+	 printf ("Login de admin!\n\nDigite sua senha: ");
+	 scanf("%s", senhadigitada);
+	 
+	 comparacao = strcmp(senhadigitada, "admin");
+	 
+	 if (comparacao == 0)
+	 {
 	  
-	    setlocale(LC_ALL, "Portuguese"); // definindo a linguagem	
-        printf ("### cartório da EBAC ###\n\n");//início do menu
-      	printf ("escolha a opção desejada do menu:\n\n");
-     	printf ("\t1 - Registrar nomes\n");
-    	printf ("\t2 - Consultar nomes\n");
-	    printf ("\t3 - deletar nomes\n");//última opcão do menu
-	    printf ("\t4 - sair\n\n");
-    	printf ("opção:");
+    	for (laco=1;laco=1;)
+	 {
+		
+	   system ("cls");
+	  
+	     setlocale(LC_ALL, "Portuguese"); // definindo a linguagem	
+         printf ("### cartório da EBAC ###\n\n");//início do menu
+      	 printf ("escolha a opção desejada do menu:\n\n");
+     	 printf ("\t1 - Registrar nomes\n");
+    	 printf ("\t2 - Consultar nomes\n");
+	     printf ("\t3 - deletar nomes\n");//última opcão do menu
+	     printf ("\t4 - sair\n\n");
+    	 printf ("opção:");
 	
-        scanf  ("%d", &opcao); // armazenando a escolha do usuário
+         scanf  ("%d", &opcao); // armazenando a escolha do usuário
     
-        system ("cls");//limpa a tela
+         system ("cls");//limpa a tela
         
-        switch(opcao)
-        {
-            case 1:
-            registro();
-         	break;
+         switch(opcao)
+         {
+             case 1:
+             registro();
+         	 break;
          	
-            case 2:
-            consulta();
-         	break;
+             case 2:
+             consulta();
+         	 break;
          	
-            case 3:
-         	deletar();
-		    break;
+             case 3:
+         	 deletar();
+		     break;
 		    
-		    case 4:
-		    printf ("obrigado por utilizar o sistema\n");
-		    return 0;
-		    break;
-		    
-		    default:
+		     case 4:
+		     printf ("obrigado por utilizar o sistema\n");
+		     return 0;
+		     break;
+		     
+		     default:
 		     printf ("\t\tNúmero inválido, tente novamente\n");
 		     system ("pause");
-		    break;
-        } 
+		     break;
+          } 
     
-      
+        }
+        
 	
-    }
+     }
+     
+     
+	 else;
+	  {
+	  	printf ("senha incorreta");
+	  }
+	  
+        
 }
-
+     
